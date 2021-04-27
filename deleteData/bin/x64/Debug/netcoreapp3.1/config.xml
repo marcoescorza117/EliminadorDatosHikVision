@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config>
+  <direccionIP>192.168.1.78</direccionIP>
+  <rutaXml>C:\Users\Usuario\Desktop\testing.xml</rutaXml>
+  <horaDelete>02:00:00 a. m.</horaDelete>
+  <horaUpdate>03:00:00 a. m.</horaUpdate>
+  <horaUpdateFoto>04:00:00 a. m.</horaUpdateFoto>
+</config>
