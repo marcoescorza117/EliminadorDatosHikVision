@@ -12,8 +12,8 @@ namespace deleteData
     {
 
         //String conexion
-        //private string constring = "Data Source=localhost\\SQLEXPRESS50;Database=siiaControl; User Id = ControlAcceso; Password=T30UBROE";
-        private string constring = "Data Source=localhost\\SQLEXPRESS2019;Database=siiaControl; User Id = ControlAcceso; Password=T30UBROE";
+        private string constring = "Data Source=localhost\\SQLEXPRESS50;Database=siiaControl; User Id = ControlAcceso; Password=T30UBROE";
+        //private string constring = "Data Source=localhost\\SQLEXPRESS2019;Database=siiaControl; User Id = ControlAcceso; Password=T30UBROE";
 
 
         //referencia a clase para convertir a OBJ
