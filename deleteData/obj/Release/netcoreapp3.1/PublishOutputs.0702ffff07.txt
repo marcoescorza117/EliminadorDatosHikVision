@@ -1,0 +1,11 @@
+C:\Users\Usuario\Desktop\deleteData.exe
+C:\Users\Usuario\Desktop\deleteData.dll
+C:\Users\Usuario\Desktop\deleteData.deps.json
+C:\Users\Usuario\Desktop\deleteData.runtimeconfig.json
+C:\Users\Usuario\Desktop\deleteData.pdb
+C:\Users\Usuario\Desktop\System.Data.SqlClient.dll
+C:\Users\Usuario\Desktop\runtimes\win-arm64\native\sni.dll
+C:\Users\Usuario\Desktop\runtimes\win-x64\native\sni.dll
+C:\Users\Usuario\Desktop\runtimes\win-x86\native\sni.dll
+C:\Users\Usuario\Desktop\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\Usuario\Desktop\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll

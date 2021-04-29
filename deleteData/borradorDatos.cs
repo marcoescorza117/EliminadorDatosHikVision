@@ -87,7 +87,7 @@ namespace deleteData
 
 
                 //Desde aqui --4:55 pm 27-abril-2021 
-               /* obtenerDatosBD datab = new obtenerDatosBD();
+               obtenerDatosBD datab = new obtenerDatosBD();
                 datab.leerXML();
 
                 foreach (var item in datab.values)
@@ -98,8 +98,8 @@ namespace deleteData
                     Thread.Sleep(170);
 
                 }
-                Console.ReadKey();
-               */
+                //Console.ReadKey();
+               
 
                 //hasta aqui --4:55 pm 27-abril-2021
 

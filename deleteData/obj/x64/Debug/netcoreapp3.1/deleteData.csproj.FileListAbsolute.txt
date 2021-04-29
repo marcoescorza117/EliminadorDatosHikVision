@@ -10,7 +10,6 @@ C:\Users\Usuario\source\repos\deleteData\deleteData\bin\x64\Debug\netcoreapp3.1\
 C:\Users\Usuario\source\repos\deleteData\deleteData\bin\x64\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\Usuario\source\repos\deleteData\deleteData\bin\x64\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\Usuario\source\repos\deleteData\deleteData\bin\x64\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-C:\Users\Usuario\source\repos\deleteData\deleteData\obj\x64\Debug\netcoreapp3.1\deleteData.csprojAssemblyReference.cache
 C:\Users\Usuario\source\repos\deleteData\deleteData\obj\x64\Debug\netcoreapp3.1\deleteData.AssemblyInfoInputs.cache
 C:\Users\Usuario\source\repos\deleteData\deleteData\obj\x64\Debug\netcoreapp3.1\deleteData.AssemblyInfo.cs
 C:\Users\Usuario\source\repos\deleteData\deleteData\obj\x64\Debug\netcoreapp3.1\deleteData.csproj.CoreCompileInputs.cache

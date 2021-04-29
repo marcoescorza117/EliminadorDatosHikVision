@@ -10,7 +10,7 @@ namespace deleteData
 {
     public class CHCNetSDK
     {
-        #region c:/HCNetSDK/HCNetSDK.dll macro definition
+        #region /HCNetSDK/HCNetSDK.dll macro definition
         //macro definition
         #region common use
 
@@ -627,7 +627,7 @@ namespace deleteData
 
         #endregion
 
-        #endregion // c:/HCNetSDK/HCNetSDK.dll macro definition
+        #endregion // /HCNetSDK/HCNetSDK.dll macro definition
 
         #region ACS_FACE_PARAM
         public const int WM_MSG_SET_FACE_PARAM_FINISH = 1002;
@@ -635,7 +635,7 @@ namespace deleteData
         public const int WM_MSG_ADD_FACE_PARAM_TOLIST = 1004;
         #endregion
 
-        #region c:/HCNetSDK/HCNetSDK.dll structure definition
+        #region /HCNetSDK/HCNetSDK.dll structure definition
 
         //structure definition
 
@@ -3256,32 +3256,32 @@ namespace deleteData
 
         #endregion
 
-        #endregion //c:/HCNetSDK/HCNetSDK.dll structure definition
+        #endregion ///HCNetSDK/HCNetSDK.dll structure definition
 
-        #region c:/HCNetSDK/HCNetSDK.dll function definition
+        #region /HCNetSDK/HCNetSDK.dll function definition
         // function definition
         /* The SDK initialization function */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_Init();
 
         /* Release the SDK resources, before the end of the procedure call*/
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_Cleanup();
 
         /* Enable to write the log file function
          * [in] nLogLevel(default 0) - log level, 0:close, 1:ERROR, 2:ERROR and DEBUG, 3-ALL
-         * [in] strLogDir - file directory to save, default:"C:\\SdkLog\\"(win)and "/home/sdklog/"(linux)
+         * [in] strLogDir - file directory to save, default:"\\SdkLog\\"(win)and "/home/sdklog/"(linux)
          * [in] bAutoDel - whether to delete log file by auto, TRUE is default
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_SetLogToFile(int nLogLevel, string strLogDir, bool bAutoDel);
 
         /* Returns the last error code of the operation */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern uint NET_DVR_GetLastError();
 
         /* Returns the last error code information of the operation */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern IntPtr NET_DVR_GetErrorMsg(ref int pErrorNo);
 
         /* Alarm host device user configuration function(following two:get and set)
@@ -3289,9 +3289,9 @@ namespace deleteData
          * [in] lUserIndex - index of user
          * [in] lpDeviceUser - lookup NET_DVR_ALARM_DEVICE_USER definition
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_SetAlarmDeviceUser(int lUserID, int lUserIndex, ref NET_DVR_ALARM_DEVICE_USER lpDeviceUser);
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_GetAlarmDeviceUser(int lUserID, int lUserIndex, ref NET_DVR_ALARM_DEVICE_USER lpDeviceUser);
 
         /* Get device configuration information function
@@ -3302,7 +3302,7 @@ namespace deleteData
          * [in] dwOutBufferSize- the receive data buffer size, don't assign 0, unit:byte
          * [out] lpBytesReturned - pointer to the length of the data received, e.g. a int type pointer, can't be NULL
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_GetDVRConfig(int lUserID, uint dwCommand, int lChannel, IntPtr lpOutBuffer, uint dwOutBufferSize, ref uint lpBytesReturned);
 
         /* Set device configuration information function
@@ -3312,7 +3312,7 @@ namespace deleteData
          * [in] lpInBuffer - a pointer to a buffer of send data
          * [in] dwInBufferSize- the send data buffer size, unit:byte
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_SetDVRConfig(int lUserID, uint dwCommand, int lChannel, IntPtr lpInBuffer, uint dwInBufferSize);
 
         /* Long connection call back function
@@ -3332,7 +3332,7 @@ namespace deleteData
          * [in] cbStateCallback - the callback function
          * [in] pUserData - pointer to user input data
          */
-        [DllImportAttribute(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImportAttribute(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_StartRemoteConfig(int lUserID, uint dwCommand, IntPtr lpInBuffer, Int32 dwInBufferLen, RemoteConfigCallback cbStateCallback, IntPtr pUserData);
 
         /* Send a long connection data
@@ -3342,28 +3342,28 @@ namespace deleteData
          * [in] pSendBuf - a pointer to a buffer of send data, associated with dwDataType
          * [in] dwBufSize - the send data buffer size, unit:byte
          */
-        [DllImportAttribute(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImportAttribute(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_SendRemoteConfig(int lHandle, uint dwDataType, IntPtr pSendBuf, uint dwBufSize);
 
         // stop a long connection
         // [in] lHandle - handle ,NET_DVR_StartRemoteConfig return value
-        [DllImportAttribute(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImportAttribute(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_StopRemoteConfig(int lHandle);
 
-        [DllImportAttribute(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImportAttribute(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_Upgrade_V40(int lUserID, uint dwUpgradeType, string sFileName, IntPtr pInbuffer, Int32 dwInBufferLen);
 
-        [DllImportAttribute(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImportAttribute(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_GetUpgradeProgress(int lUpgradeHandle);
 
-        [DllImportAttribute(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImportAttribute(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_CloseUpgradeHandle(int lUpgradeHandle);
 
         /* get long connection configuration status
          * [in] lHandle - handle ,NET_DVR_StartRemoteConfig return value
          * [out] pState - the return status pointer
          */
-        [DllImportAttribute(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImportAttribute(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_GetRemoteConfigState(int lHandle, IntPtr pState);
 
         /* obtain the result of the information one by one
@@ -3371,7 +3371,7 @@ namespace deleteData
          * [out] lpOutBuff - a pointer to a buffer to receive data(user manual for more details)
          * [in] dwOutBuffSize- the receive data buffer size, unit:byte
          */
-        [DllImportAttribute(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImportAttribute(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_GetNextRemoteConfig(int lHandle, IntPtr lpOutBuff, uint dwOutBuffSize);
 
         /* Batch for device configuration information (with sending data)
@@ -3384,7 +3384,7 @@ namespace deleteData
          * [out] lpOutBuffer - a pointer to receive data buffer, One to one correspondence(user manual for more details)
          * [in] dwOutBufferSize- the receive data buffer size, unit:byte
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_GetDeviceConfig(int lUserID, uint dwCommand, uint dwCount, IntPtr lpInBuffer, uint dwInBufferSize, IntPtr lpStatusList, IntPtr lpOutBuffer, uint dwOutBufferSize);
 
         /* Batch for device configuration information (with sending data)
@@ -3397,7 +3397,7 @@ namespace deleteData
          * [out] lpInParamBuffer - a pointer to set parameters for the device buffer, One to one correspondence(user manual for more details)
          * [in] dwInParamBufferSize- the correspond data buffer size, unit:byte
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_SetDeviceConfig(int lUserID, uint dwCommand, uint dwCount, IntPtr lpInBuffer, uint dwInBufferSize, IntPtr lpStatusList, IntPtr lpInParamBuffer, uint dwInParamBufferSize);
 
 
@@ -3408,38 +3408,38 @@ namespace deleteData
          * [in] lpInBuffer - a pointer to send data buffer(user manual for more details)
          * [in] dwInBufferSize- the correspond buffer size, unit:byte
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_RemoteControl(int lUserID, uint dwCommand, IntPtr lpInBuffer, uint dwInBufferSize);
 
         /* login
          * [in] pLoginInfo - login parameters
          * [in] lpDeviceInfo - device informations
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_Login_V40(ref NET_DVR_USER_LOGIN_INFO pLoginInfo, ref NET_DVR_DEVICEINFO_V40 lpDeviceInfo);
 
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_Logout_V30(Int32 lUserID);
 
         public delegate void RealDataCallBack(int lPlayHandle, uint dwDataType, IntPtr pBuffer, uint dwBufSize, IntPtr pUser);
 
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_RealPlay_V40(int lUserID, ref NET_DVR_PREVIEWINFO lpPreviewInfo, RealDataCallBack fRealDataCallBack_V30, IntPtr pUser);
 
         // alarm
 
         /* Set up alarm upload channel, to obtain the information such as alarm*/
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_SetupAlarmChan(int lUserID);
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_SetupAlarmChan_V30(int lUserID);
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_SetupAlarmChan_V41(int lUserID, ref NET_DVR_SETUPALARM_PARAM lpSetupParam);
 
         /* shut down alarm upload channel, to obtain the information such as alarm*/
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_CloseAlarmChan(int lAlarmHandle);
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_CloseAlarmChan_V30(int lAlarmHandle);
 
 
@@ -3459,10 +3459,10 @@ namespace deleteData
          * [in] fMessageCallBack - callback function
          * [in] pUser - user data
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_SetDVRMessageCallBack_V50(int iIndex, MSGCallBack fMessageCallBack, IntPtr pUser);
 
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_SetDVRMessageCallBack_V31(MSGCallBack_V31 fMessageCallBack, IntPtr pUser);
 
         /* NET_DVR_GetDeviceAbility get device ability
@@ -3473,15 +3473,15 @@ namespace deleteData
          * [out] pOutBuf- out buff(ACS_ABILITY is described with XML)
          * [in] dwOutLength - the correspond buffer size, unit:byte
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_GetDeviceAbility(int lUserID, uint dwAbilityType, IntPtr pInBuf, uint dwInLength, IntPtr pOutBuf, uint dwOutLength);
 
         /* Get to the SDK version information*/
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern uint NET_DVR_GetSDKVersion();
 
         /* Get version number of the SDK and build information*/
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern uint NET_DVR_GetSDKBuildVersion();
 
         /** remote control gateway
@@ -3489,34 +3489,34 @@ namespace deleteData
          * [in] lGatewayIndex - 1-begin 0xffffffff-all
          * [in] dwStaic - : 0-close，1-open，2-always open，3-always close
          */
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_ControlGateway(int lUserID, int lGatewayIndex, uint dwStaic);
 
 
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_STDXMLConfig(int lUserID, IntPtr lpInputParam, IntPtr lpOutputParam);
 
         public delegate void REALDATACALLBACK(Int32 lRealHandle, UInt32 dwDataType, ref byte pBuffer, UInt32 dwBufSize, IntPtr pUser);
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_RealPlay_V30(int iUserID, ref NET_DVR_CLIENTINFO lpClientInfo, REALDATACALLBACK fRealDataCallBack_V30, IntPtr pUser, UInt32 bBlocked);
 
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_StopRealPlay(int iRealHandle);
 
         public delegate void VOICEDATACALLBACKV30(int lVoiceComHandle, string pRecvDataBuffer, uint dwBufSize, byte byAudioFlag, System.IntPtr pUser);
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_StartVoiceCom_V30(int lUserID, uint dwVoiceChan, bool bNeedCBNoEncData, VOICEDATACALLBACKV30 fVoiceDataCallBack, IntPtr pUser);
 
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_SetVoiceComClientVolume(int lVoiceComHandle, ushort wVolume);
 
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_StopVoiceCom(int lVoiceComHandle);
 
         [DllImport("User32.dll", EntryPoint = "PostMessage")]
         public static extern int PostMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
 
-        [DllImport(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImport(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern bool NET_DVR_CaptureJPEGPicture(int lUserID, int lChannel, ref CHCNetSDK.NET_DVR_JPEGPARA lpJpegPara, IntPtr sPicFileName);
         #endregion
 
@@ -3758,7 +3758,7 @@ namespace deleteData
         }
 
         // 新增接口一个
-        [DllImportAttribute(@"c:\HCNetSDK\HCNetSDK.dll")]
+        [DllImportAttribute(@"\HCNetSDK\HCNetSDK.dll")]
         public static extern int NET_DVR_SendWithRecvRemoteConfig(int lHandle, IntPtr lpInBuff, uint dwInBuffSize, IntPtr lpOutBuff, uint dwOutBuffSize, ref uint dwOutDataLen);
 
 
